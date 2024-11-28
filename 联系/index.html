@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>我的网站-联系</title>
+<link rel="icon" href="../favicon.png" type="image/png">
+</link>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white; /* 背景颜色 */
+        margin: 0; /* 去掉默认外边距 */
+        padding: 20px; /* 增加内边距 */
+    }
+    h1 {
+        color: skyblue; /* 标题颜色 */
+        text-align: center;
+    }
+    hr {
+        margin: 20px 0; /* 上下外边距 */
+        border: 1px solid gainsboro; /* 分隔线样式 */
+    }
+    .navbar {
+        background-color: skyblue; /* 导航栏背景颜色 */
+        overflow: hidden; /* 清除浮动 */
+        padding: 15px; /* 导航栏内边距 */
+    }
+    .navbar a {
+        float: left; /* 左对齐 */
+        display: block; /* 变为块级元素 */
+        color: white; /* 字体颜色 */
+        text-align: center; /* 文本居中 */
+        padding: 14px 20px; /* 内边距 */
+        text-decoration: none; /* 去掉下划线 */
+        transition: background-color 0.3s; /* 背景颜色过渡效果 */
+    }
+    .navbar a:hover {
+        background-color: deepskyblue; /* 悬停时的背景颜色 */
+    }
+    .button-container {
+        display: flex; /* 使用弹性布局 */
+        justify-content: center; /* 居中对齐按钮 */
+        gap: 20px; /* 增加按钮之间的间距 */
+        flex-wrap: wrap; /* 允许按钮换行 */
+    }
+    button {
+        background-color: skyblue; /* 按钮背景颜色 */
+        border: none;
+        color: white; /* 按钮文字颜色 */
+        padding: 15px 25px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 10px 0; /* 上下增加一些间距 */
+    }
+    button:hover {
+        background-color: deepskyblue; /* 悬停时背景颜色 */
+    }
+    a.button-link {
+        text-decoration: none; /* 去掉下划线 */
+    }
+    .text-content {
+            text-align: center; /* 内容居中 */
+            margin-top: 20px; /* 上外边距 */
+            font-size: 18px; /* 字体大小 */
+            color: black; /* 字体颜色 */
+        }
+    .left-aligned {
+        text-align: left; /* 左对齐文本 */
+        font-size: 16px; /* 字体大小 */
+        color: black; /* 字体颜色 */
+        line-height: 1.5; /* 行高，增加可读性 */
+        margin: 20px; /* 外边距 */
+        padding: 10px; /* 内边距 */
+    }
+</style>
+</head>
+<body>
+<h1>
+    <img src="../favicon.png" style="width: 40px; height: auto; margin-bottom: -10px;">
+    我的网站
+</h1>
+<div class="navbar">
+    <a href="../首页/index.html">首页</a>
+    <a href="../下载/index.html">下载</a>
+    <a href="../联系/index.html">联系</a>
+</div>
+<hr>
+<div class="button-container">
+    <a class="button-link" href="https://space.bilibili.com/3546770405591755" target="_blank">
+        <button>bilibili</button>
+    </a>
+    <a class="button-link" href="https://github.com/xyz18950377305" target="_blank">
+        <button>GitHub</button>
+    </a>
+    <hr>
+    <a class="button-link" href="https://forms.office.com/r/PtbJznmRa0" target="_blank">
+        <button>意见反馈</button>
+    </a>
+    <a class="button-link" href="https://forms.office.com/r/AMMFxYuWA6" target="_blank">
+        <button>想法创意</button>
+    </a>
+</div>
+<div class="text-content">
+    <p>邮箱: xyz18950377305@qq.com</p>
+    <p>电话: (暂不提供)</p>
+    <p>微信: xyz18950377305</p>
+    <p>QQ: (暂不提供)</p>
+</div>
+</body>
+</html>
