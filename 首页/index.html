@@ -56,9 +56,6 @@
     button:hover {
         background-color: deepskyblue; /* 悬停时背景颜色 */
     }
-    a.button-link {
-        text-decoration: none; /* 去掉下划线 */
-    }
     .text-content {
             text-align: center; /* 内容居中 */
             margin-top: 20px; /* 上外边距 */
@@ -73,6 +70,22 @@
         margin: 20px; /* 外边距 */
         padding: 10px; /* 内边距 */
     }
+    .styled-link a {
+    color: skyblue; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    font-size: 18px; /* 字体大小 */
+    transition: color 0.3s; /* 颜色过渡效果 */
+    margin-right: 10px; /* 为链接和文本之间添加间距 */
+    display: inline-block; /* 使链接为块级元素以增强控制 */
+    }
+    .styled-link a:hover {
+        color: deepskyblue; /* 悬停时链接颜色 */
+        text-decoration: underline; /* 悬停时添加下划线 */
+    }
+    .styled-link p {
+        font-size: 18px; /* 确保与链接的字体大小一致 */
+        color: black; /* 确保文本颜色与设计一致 */
+    }
 </style>
 </head>
 <body>
@@ -82,6 +95,7 @@
 </h1>
 <div class="navbar">
     <a href="../首页">首页</a>
+    <a href="../文章">文章</a>
     <a href="../下载">下载</a>
     <a href="../联系">联系</a>
 </div>
