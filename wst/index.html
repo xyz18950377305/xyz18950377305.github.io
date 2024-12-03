@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>我的网站-文章</title>
+<link rel="icon" href="../favicon.png" type="image/png">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white; /* 背景颜色 */
+        margin: 0; /* 去掉默认外边距 */
+        padding: 20px; /* 增加内边距 */
+    }
+    h1 {
+        color: skyblue; /* 标题颜色 */
+        text-align: center;
+    }
+    hr {
+        margin: 20px 0; /* 上下外边距 */
+        border: 1px solid gainsboro; /* 分隔线样式 */
+    }
+    .navbar {
+        background-color: skyblue; /* 导航栏背景颜色 */
+        overflow: hidden; /* 清除浮动 */
+        padding: 15px; /* 导航栏内边距 */
+    }
+    .navbar a {
+        float: left; /* 左对齐 */
+        display: block; /* 变为块级元素 */
+        color: white; /* 字体颜色 */
+        text-align: center; /* 文本居中 */
+        padding: 14px 20px; /* 内边距 */
+        text-decoration: none; /* 去掉下划线 */
+        transition: background-color 0.3s; /* 背景颜色过渡效果 */
+    }
+    .navbar a:hover {
+        background-color: deepskyblue; /* 悬停时的背景颜色 */
+    }
+    .button-container {
+        display: flex; /* 使用弹性布局 */
+        justify-content: center; /* 居中对齐按钮 */
+        gap: 20px; /* 增加按钮之间的间距 */
+        flex-wrap: wrap; /* 允许按钮换行 */
+    }
+    button {
+        background-color: skyblue; /* 按钮背景颜色 */
+        border: none;
+        color: white; /* 按钮文字颜色 */
+        padding: 15px 25px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 10px 0; /* 上下增加一些间距 */
+    }
+    button:hover {
+        background-color: deepskyblue; /* 悬停时背景颜色 */
+    }
+    .text-content {
+            text-align: center; /* 内容居中 */
+            margin-top: 20px; /* 上外边距 */
+            font-size: 18px; /* 字体大小 */
+            color: black; /* 字体颜色 */
+        }
+    .left-aligned {
+        text-align: left; /* 左对齐文本 */
+        font-size: 16px; /* 字体大小 */
+        color: black; /* 字体颜色 */
+        line-height: 1.5; /* 行高，增加可读性 */
+        margin: 20px; /* 外边距 */
+        padding: 10px; /* 内边距 */
+    }
+    .left-aligned img {
+        max-width: 100%; /* 图片宽度自适应 */
+        height: auto; /* 图片高度自适应 */
+    }
+    .left-aligned video {
+        max-width: 100%; /* 视频宽度自适应 */
+        height: auto; /* 视频高度自适应 */
+    }
+    .styled-link a {
+    color: skyblue; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    font-size: 18px; /* 字体大小 */
+    transition: color 0.3s; /* 颜色过渡效果 */
+    margin-right: 10px; /* 为链接和文本之间添加间距 */
+    display: inline-block; /* 使链接为块级元素以增强控制 */
+    }
+    .styled-link a:hover {
+        color: deepskyblue; /* 悬停时链接颜色 */
+        text-decoration: underline; /* 悬停时添加下划线 */
+    }
+    .styled-link p {
+        font-size: 18px; /* 确保与链接的字体大小一致 */
+        color: black; /* 确保文本颜色与设计一致 */
+    }
+</style>
+</head>
+<body>
+<h1>
+    <img src="../favicon.png" style="width: 40px; height: auto; margin-bottom: -10px;">
+    我的网站
+</h1>
+<div class="navbar">
+    <a href="../首页">首页</a>
+    <a href="../文章">文章</a>
+    <a href="../下载">下载</a>
+    <a href="../联系">联系</a>
+</div>
+<hr>
+<div id="imgContainer" class="left-aligned">
+</div>
+<script>
+    document.getElementById("imgContainer");
+    password = prompt("请输入密码");
+
+    if (password == "1111"){
+        alert("密码正确");
+        imgContainer.innerHTML = `
+        <video src="./视频.mp4" controls style="width: 100%; height: auto;"></video>
+        <img src="./照片/(1).png">
+        <img src="./照片/(2).png">
+        <img src="./照片/(3).png">
+        <img src="./照片/(4).png">
+        <img src="./照片/(5).png">
+        <img src="./照片/(6).png">
+        <img src="./照片/(7).png">
+        <img src="./照片/(8).png">
+        <img src="./照片/(9).png">
+        <img src="./照片/(10).png">
+        <img src="./照片/(11).png">
+        <img src="./照片/(12).png">
+        <img src="./照片/(13).png">
+        <img src="./照片/(14).png">
+        <img src="./照片/(15).png">
+        <img src="./照片/(16).png">
+        <img src="./照片/(17).png">
+        <img src="./照片/(18).png">
+        <img src="./照片/(19).png">
+        <img src="./照片/(20).png">
+        <img src="./照片/(21).png">
+        <img src="./照片/(22).png">
+        <img src="./照片/(23).png">
+        <img src="./照片/(24).png">
+        <img src="./照片/(25).png">
+        <img src="./照片/(26).png">
+        <img src="./照片/(27).png">
+        <img src="./照片/(28).png">
+        <img src="./照片/(29).png">
+        <img src="./照片/(30).png">
+        <img src="./照片/(31).png">
+        <img src="./照片/(32).png">
+        <img src="./照片/(33).png">
+        <img src="./照片/(34).png">
+        <img src="./照片/(35).png">
+        <img src="./照片/(36).png">
+        <img src="./照片/(37).png">
+        <img src="./照片/(38).png">
+        <img src="./照片/(39).png">
+        <img src="./照片/(40).png">
+        <img src="./照片/(41).png">
+        <img src="./照片/(42).png">
+        <img src="./照片/(43).png">
+        <img src="./照片/(44).png">
+        <img src="./照片/(45).png">
+        <img src="./照片/(46).png">
+        <img src="./照片/(47).png">
+        <img src="./照片/(48).png">
+        <img src="./照片/(49).png">
+        <img src="./照片/(50).png">
+        <img src="./照片/(51).png">
+        <img src="./照片/(52).png">
+        <img src="./照片/(53).png">
+        <img src="./照片/(54).png">
+        <img src="./照片/(55).png">
+        <img src="./照片/(56).png">
+        <img src="./照片/(57).png">
+        <img src="./照片/(58).png">
+        <img src="./照片/(59).png">
+        <img src="./照片/(60).png">
+        <img src="./照片/(61).png">
+        <img src="./照片/(62).png">
+        <img src="./照片/(63).png">
+        <img src="./照片/(64).png">
+        <img src="./照片/(65).png">
+        <img src="./照片/(66).png">
+        <img src="./照片/(67).png">
+        <img src="./照片/(68).png">
+        <img src="./照片/(69).png">
+        <img src="./照片/(70).png">
+        <img src="./照片/(71).png">
+        <img src="./照片/(72).png">
+        <img src="./照片/(73).png">
+        <img src="./照片/(74).png">
+        <img src="./照片/(75).png">
+        <img src="./照片/(76).png">
+        <img src="./照片/(77).png">
+        <img src="./照片/(78).png">
+        <img src="./照片/(79).png">
+        <img src="./照片/(80).png">
+        <img src="./照片/(81).png">
+        <img src="./照片/(82).png">
+        <img src="./照片/(83).png">
+        <img src="./照片/(84).png">
+        <img src="./照片/(85).png">
+        <img src="./照片/(86).png">
+        <img src="./照片/(87).png">
+        <img src="./照片/(88).png">
+        <img src="./照片/(89).png">
+        <img src="./照片/(90).png">
+        <img src="./照片/(91).png">
+        <img src="./照片/(92).png">
+        <img src="./照片/(93).png">
+        <img src="./照片/(94).png">
+        <img src="./照片/(95).png">
+        <img src="./照片/(96).png">
+        <img src="./照片/(97).png">
+        <img src="./照片/(98).png">
+        <img src="./照片/(99).png">
+        <img src="./照片/(100).png">
+        <img src="./照片/(101).png">
+        <img src="./照片/(102).png">
+        <img src="./照片/(103).png">
+        <img src="./照片/(104).png">
+        <img src="./照片/(105).png">
+        <img src="./照片/(106).png">
+        <img src="./照片/(107).png">
+        <img src="./照片/(108).png">
+        <img src="./照片/(109).png">
+        <img src="./照片/(110).png">
+        <img src="./照片/(111).png">
+        <img src="./照片/(112).png">
+        <img src="./照片/(113).png">
+        <img src="./照片/(114).png">
+        <img src="./照片/(115).png">
+        <img src="./照片/(116).png">
+        <img src="./照片/(117).png">
+        <img src="./照片/(118).png">
+        <img src="./照片/(119).png">
+        <img src="./照片/(120).png">
+        <img src="./照片/(121).png">
+        <img src="./照片/(122).png">
+        <img src="./照片/(123).png">
+        <img src="./照片/(124).png">
+        <img src="./照片/(125).png">
+        <img src="./照片/(126).png">
+        <img src="./照片/(127).png">
+        <img src="./照片/(128).png">
+        <img src="./照片/(129).png">
+        <img src="./照片/(130).png">
+        <img src="./照片/(131).png">
+        <img src="./照片/(132).png">
+        <img src="./照片/(133).png">
+        <img src="./照片/(134).png">
+        <img src="./照片/(135).png">
+        <img src="./照片/(136).png">
+        <img src="./照片/(137).png">
+        <img src="./照片/(138).png">
+        <img src="./照片/(139).png">
+        <img src="./照片/(140).png">
+        <img src="./照片/(141).png">
+        <img src="./照片/(142).png">
+        <img src="./照片/(143).png">
+        <img src="./照片/(144).png">
+        <img src="./照片/(145).png">
+        <img src="./照片/(146).png">
+        <img src="./照片/(147).png">
+        <img src="./照片/(148).png">
+        <img src="./照片/(149).png">
+        <img src="./照片/(150).png">
+        <img src="./照片/(151).png">
+        <img src="./照片/(152).png">
+        <img src="./照片/(153).png">
+        <img src="./照片/(154).png">
+        <img src="./照片/(155).png">
+        <img src="./照片/(156).png">
+        <img src="./照片/(157).png">
+        <img src="./照片/(158).png">
+        <img src="./照片/(159).png">
+        <img src="./照片/(160).png">
+        <img src="./照片/(161).png">
+        <img src="./照片/(162).png">
+        <img src="./照片/(163).png">
+        <img src="./照片/(164).png">
+        <img src="./照片/(165).png">
+        <img src="./照片/(166).png">
+        <img src="./照片/(167).png">
+        <img src="./照片/(168).png">
+        <img src="./照片/(169).png">
+        <img src="./照片/(170).png">
+        <img src="./照片/(171).png">
+        <img src="./照片/(172).png">
+        <img src="./照片/(173).png">
+        <img src="./照片/(174).png">
+        <img src="./照片/(175).png">
+        <img src="./照片/(176).png">
+        <img src="./照片/(177).png">
+        <img src="./照片/(178).png">
+        <img src="./照片/(179).png">
+        <img src="./照片/(180).png">
+        <img src="./照片/(181).png">
+        <img src="./照片/(182).png">
+        <img src="./照片/(183).png">
+        <img src="./照片/(184).png">
+        <img src="./照片/(185).png">
+        <img src="./照片/(186).png">
+        <img src="./照片/(187).png">
+        <img src="./照片/(188).png">
+        <img src="./照片/(189).png">
+        <img src="./照片/(190).png">
+        <img src="./照片/(191).png">
+        <img src="./照片/(192).png">
+        <img src="./照片/(193).png">
+        <img src="./照片/(194).png">
+        <img src="./照片/(195).png">
+        <img src="./照片/(196).png">
+        <img src="./照片/(197).png">
+        <img src="./照片/(198).png">
+        <img src="./照片/(199).png">
+        <img src="./照片/(200).png">
+        <img src="./照片/(201).png">
+        <img src="./照片/(202).png">
+        <img src="./照片/(203).png">
+        <img src="./照片/(204).png">
+        <img src="./照片/(205).png">
+        <img src="./照片/(206).png">
+        <img src="./照片/(207).png">
+        <img src="./照片/(208).png">
+        <img src="./照片/(209).png">
+        <img src="./照片/(210).png">
+        <img src="./照片/(211).png">
+        <img src="./照片/(212).png">
+        <img src="./照片/(213).png">
+        <img src="./照片/(214).png">
+        <img src="./照片/(215).png">
+        <img src="./照片/(216).png">
+        <img src="./照片/(217).png">
+        <img src="./照片/(218).png">
+        <img src="./照片/(219).png">
+        <img src="./照片/(220).png">
+        <img src="./照片/(221).png">
+        <img src="./照片/(222).png">
+        <img src="./照片/(223).png">
+        <img src="./照片/(224).png">
+        <img src="./照片/(225).png">
+        <img src="./照片/(226).png">
+        <img src="./照片/(227).png">
+        <img src="./照片/(228).png">
+        <img src="./照片/(229).png">
+        <img src="./照片/(230).png">
+        <img src="./照片/(231).png">
+        <img src="./照片/(232).png">
+        <img src="./照片/(233).png">
+        <img src="./照片/(234).png">
+        <img src="./照片/(235).png">
+        <img src="./照片/(236).png">
+        <img src="./照片/(237).png">
+        <img src="./照片/(238).png">
+        <img src="./照片/(239).png">
+        <img src="./照片/(240).png">
+        <img src="./照片/(241).png">
+        <img src="./照片/(242).png">
+        <img src="./照片/(243).png">
+        <img src="./照片/(244).png">
+        <img src="./照片/(245).png">
+        <img src="./照片/(246).png">
+        <img src="./照片/(247).png">
+        <img src="./照片/(248).png">
+        <img src="./照片/(249).png">
+        <img src="./照片/(250).png">
+        <img src="./照片/(251).png">
+        <img src="./照片/(252).png">
+        <img src="./照片/(253).png">
+        <img src="./照片/(254).png">
+        <img src="./照片/(255).png">
+        <img src="./照片/(256).png">
+        <img src="./照片/(257).png">
+        <img src="./照片/(258).png">
+        <img src="./照片/(259).png">
+        <img src="./照片/(260).png">
+        <img src="./照片/(261).png">
+        <img src="./照片/(262).png">
+        <img src="./照片/(263).png">
+        <img src="./照片/(264).png">
+        <img src="./照片/(265).png">
+        <img src="./照片/(266).png">
+        <img src="./照片/(267).png">
+        <img src="./照片/(268).png">
+        <img src="./照片/(269).png">
+        <img src="./照片/(270).png">
+        <img src="./照片/(271).png">
+        <img src="./照片/(272).png">
+        <img src="./照片/(273).png">
+        <img src="./照片/(274).png">
+        <img src="./照片/(275).png">
+        <img src="./照片/(276).png">
+        <img src="./照片/(277).png">
+        <img src="./照片/(278).png">
+        <img src="./照片/(279).png">
+        <img src="./照片/(280).png">
+        <img src="./照片/(281).png">
+        <img src="./照片/(282).png">
+        <img src="./照片/(283).png">
+        <img src="./照片/(284).png">
+        <img src="./照片/(285).png">
+        <img src="./照片/(286).png">
+        <img src="./照片/(287).png">
+        <img src="./照片/(288).png">
+        <img src="./照片/(289).png">
+        <img src="./照片/(290).png">
+        <img src="./照片/(291).png">
+        <img src="./照片/(292).png">
+        <img src="./照片/(293).png">
+        <img src="./照片/(294).png">
+        <img src="./照片/(295).png">
+        <img src="./照片/(296).png">
+        <img src="./照片/(297).png">
+        <img src="./照片/(298).png">
+        <img src="./照片/(299).png">
+        <img src="./照片/(300).png">
+        <img src="./照片/(301).png">
+        <img src="./照片/(302).png">
+        <img src="./照片/(303).png">
+        <img src="./照片/(304).png">
+        <img src="./照片/(305).png">
+        <img src="./照片/(306).png">
+        <img src="./照片/(307).png">
+        <img src="./照片/(308).png">
+        <img src="./照片/(309).png">
+        <img src="./照片/(310).png">
+        <img src="./照片/(311).png">
+        <img src="./照片/(312).png">
+        <img src="./照片/(313).png">
+        <img src="./照片/(314).png">
+        <img src="./照片/(315).png">
+        <img src="./照片/(316).png">
+        <img src="./照片/(317).png">
+        <img src="./照片/(318).png">
+        <img src="./照片/(319).png">
+        <img src="./照片/(320).png">
+        <img src="./照片/(321).png">
+        <img src="./照片/(322).png">
+        <img src="./照片/(323).png">
+        <img src="./照片/(324).png">
+        <img src="./照片/(325).png">
+        <img src="./照片/(326).png">
+        <img src="./照片/(327).png">
+        <img src="./照片/(328).png">
+        <img src="./照片/(329).png">
+        <img src="./照片/(330).png">
+        <img src="./照片/(331).png">
+        <img src="./照片/(332).png">
+        <img src="./照片/(333).png">
+        <img src="./照片/(334).png">
+        <img src="./照片/(335).png">
+        <img src="./照片/(336).png">
+        <img src="./照片/(337).png">
+        <img src="./照片/(338).png">
+        <img src="./照片/(339).png">
+        <img src="./照片/(340).png">
+        <img src="./照片/(341).png">
+        <img src="./照片/(342).png">
+        <img src="./照片/(343).png">
+        <img src="./照片/(344).png">
+        <img src="./照片/(345).png">
+        <img src="./照片/(346).png">
+        <img src="./照片/(347).png">
+        <img src="./照片/(348).png">
+        <img src="./照片/(349).png">
+        <img src="./照片/(350).png">
+        <img src="./照片/(351).png">
+        <img src="./照片/(352).png">
+        <img src="./照片/(353).png">
+        <img src="./照片/(354).png">
+        <img src="./照片/(355).png">
+        <img src="./照片/(356).png">
+        <img src="./照片/(357).png">
+        <img src="./照片/(358).png">
+        <img src="./照片/(359).png">
+        <img src="./照片/(360).png">
+        <img src="./照片/(361).png">
+        <img src="./照片/(362).png">
+        <img src="./照片/(363).png">
+        <img src="./照片/(364).png">
+        <img src="./照片/(365).png">
+        <img src="./照片/(366).png">
+        <img src="./照片/(367).png">
+        <img src="./照片/(368).png">
+        <img src="./照片/(369).png">
+        <img src="./照片/(370).png">
+        <img src="./照片/(371).png">
+        <img src="./照片/(372).png">
+        <img src="./照片/(373).png">
+        <img src="./照片/(374).png">
+        <img src="./照片/(375).png">
+        <img src="./照片/(376).png">
+        <img src="./照片/(377).png">
+        <img src="./照片/(378).png">
+        <img src="./照片/(379).png">
+        <img src="./照片/(380).png">
+        <img src="./照片/(381).png">
+        <img src="./照片/(382).png">
+        <img src="./照片/(383).png">
+        <img src="./照片/(384).png">
+        <img src="./照片/(385).png">
+        <img src="./照片/(386).png">
+        <img src="./照片/(387).png">
+        <img src="./照片/(388).png">
+        <img src="./照片/(389).png">
+        <img src="./照片/(390).png">
+        <img src="./照片/(391).png">
+        <img src="./照片/(392).png">
+        <img src="./照片/(393).png">
+        <img src="./照片/(394).png">
+        <img src="./照片/(395).png">
+        <img src="./照片/(396).png">
+        <img src="./照片/(397).png">
+        <img src="./照片/(398).png">
+        <img src="./照片/(399).png">
+        <img src="./照片/(400).png">
+        <img src="./照片/(401).png">
+        <img src="./照片/(402).png">
+        <img src="./照片/(403).png">
+        <img src="./照片/(404).png">
+        <img src="./照片/(405).png">
+        <img src="./照片/(406).png">
+        <img src="./照片/(407).png">
+        <img src="./照片/(408).png">
+        <img src="./照片/(409).png">
+        <img src="./照片/(410).png">
+        <img src="./照片/(411).png">
+        <img src="./照片/(412).png">
+        <img src="./照片/(413).png">
+        <img src="./照片/(414).png">
+        <img src="./照片/(415).png">
+        <img src="./照片/(416).png">
+        <img src="./照片/(417).png">
+        <img src="./照片/(418).png">
+        <img src="./照片/(419).png">
+        <img src="./照片/(420).png">
+        <img src="./照片/(421).png">
+        <img src="./照片/(422).png">
+        <img src="./照片/(423).png">
+        <img src="./照片/(424).png">
+        <img src="./照片/(425).png">
+        <img src="./照片/(426).png">
+        <img src="./照片/(427).png">
+        <img src="./照片/(428).png">
+        <img src="./照片/(429).png">
+        <img src="./照片/(430).png">
+        <img src="./照片/(431).png">
+        <img src="./照片/(432).png">
+        <img src="./照片/(433).png">
+        <img src="./照片/(434).png">
+        <img src="./照片/(435).png">
+        <img src="./照片/(436).png">
+        <img src="./照片/(437).png">
+        <img src="./照片/(438).png">
+        <img src="./照片/(439).png">
+        <img src="./照片/(440).png">
+        <img src="./照片/(441).png">
+        <img src="./照片/(442).png">
+        <img src="./照片/(443).png">
+        <img src="./照片/(444).png">
+        <img src="./照片/(445).png">
+        <img src="./照片/(446).png">
+        <img src="./照片/(447).png">
+        <img src="./照片/(448).png">
+        <img src="./照片/(449).png">
+        <img src="./照片/(450).png">
+        <img src="./照片/(451).png">
+        <img src="./照片/(452).png">
+        <img src="./照片/(453).png">
+        <img src="./照片/(454).png">
+        <img src="./照片/(455).png">
+        <img src="./照片/(456).png">
+        <img src="./照片/(457).png">
+        <img src="./照片/(458).png">
+        <img src="./照片/(459).png">
+        <img src="./照片/(460).png">
+        <img src="./照片/(461).png">
+        <img src="./照片/(462).png">
+        <img src="./照片/(463).png">
+        <img src="./照片/(464).png">
+        <img src="./照片/(465).png">
+        <img src="./照片/(466).png">
+        <img src="./照片/(467).png">
+        <img src="./照片/(468).png">
+        <img src="./照片/(469).png">
+        <img src="./照片/(470).png">
+        <img src="./照片/(471).png">
+        <img src="./照片/(472).png">
+        <img src="./照片/(473).png">
+        <img src="./照片/(474).png">
+        <img src="./照片/(475).png">
+        <img src="./照片/(476).png">
+        <img src="./照片/(477).png">
+        <img src="./照片/(478).png">
+        <img src="./照片/(479).png">
+        <img src="./照片/(480).png">
+        <img src="./照片/(481).png">
+        <img src="./照片/(482).png">
+        <img src="./照片/(483).png">
+        <img src="./照片/(484).png">
+        <img src="./照片/(485).png">
+        <img src="./照片/(486).png">
+        <img src="./照片/(487).png">
+        <img src="./照片/(488).png">
+        <img src="./照片/(489).png">
+        <img src="./照片/(490).png">
+        <img src="./照片/(491).png">
+        <img src="./照片/(492).png">
+        <img src="./照片/(493).png">
+        <img src="./照片/(494).png">
+        <img src="./照片/(495).png">
+        <img src="./照片/(496).png">
+        <img src="./照片/(497).png">
+        <img src="./照片/(498).png">
+        <img src="./照片/(499).png">
+        <img src="./照片/(500).png">
+        <img src="./照片/(501).png">
+        <img src="./照片/(502).png">
+        <img src="./照片/(503).png">
+        <img src="./照片/(504).png">
+        <img src="./照片/(505).png">
+        <img src="./照片/(506).png">
+        <img src="./照片/(507).png">
+        <img src="./照片/(508).png">
+        <img src="./照片/(509).png">
+        <img src="./照片/(510).png">
+        <img src="./照片/(511).png">
+        <img src="./照片/(512).png">
+        <img src="./照片/(513).png">
+        <img src="./照片/(514).png">
+        <img src="./照片/(515).png">
+        <img src="./照片/(516).png">
+        <img src="./照片/(517).png">
+        <img src="./照片/(518).png">
+        <img src="./照片/(519).png">
+        <img src="./照片/(520).png">
+        <img src="./照片/(521).png">
+        <img src="./照片/(522).png">
+        <img src="./照片/(523).png">
+        <img src="./照片/(524).png">
+        <img src="./照片/(525).png">
+        <img src="./照片/(526).png">
+        <img src="./照片/(527).png">
+        <img src="./照片/(528).png">
+        <img src="./照片/(529).png">
+        <img src="./照片/(530).png">
+        <img src="./照片/(531).png">
+        <img src="./照片/(532).png">
+        <img src="./照片/(533).png">
+        <img src="./照片/(534).png">
+        <img src="./照片/(535).png">
+        <img src="./照片/(536).png">
+        <img src="./照片/(537).png">
+        <img src="./照片/(538).png">
+        <img src="./照片/(539).png">
+        <img src="./照片/(540).png">
+        <img src="./照片/(541).png">
+        <img src="./照片/(542).png">
+        <img src="./照片/(543).png">
+        <img src="./照片/(544).png">
+        <img src="./照片/(545).png">
+        <img src="./照片/(546).png">
+        <img src="./照片/(547).png">
+        <img src="./照片/(548).png">
+        <img src="./照片/(549).png">
+        <img src="./照片/(550).png">
+        <img src="./照片/(551).png">
+        <img src="./照片/(552).png">
+        <img src="./照片/(553).png">
+        <img src="./照片/(554).png">
+        <img src="./照片/(555).png">
+        <img src="./照片/(556).png">
+        <img src="./照片/(557).png">
+        <img src="./照片/(558).png">
+        <img src="./照片/(559).png">
+        <img src="./照片/(560).png">
+        <img src="./照片/(561).png">
+        <img src="./照片/(562).png">
+        <img src="./照片/(563).png">
+        <img src="./照片/(564).png">
+        <img src="./照片/(565).png">
+        <img src="./照片/(566).png">
+        <img src="./照片/(567).png">
+        <img src="./照片/(568).png">
+        <img src="./照片/(569).png">
+        <img src="./照片/(570).png">
+        <img src="./照片/(571).png">
+        <img src="./照片/(572).png">
+        <img src="./照片/(573).png">
+        <img src="./照片/(574).png">
+        <img src="./照片/(575).png">
+        <img src="./照片/(576).png">
+        <img src="./照片/(577).png">
+        <img src="./照片/(578).png">
+        <img src="./照片/(579).png">
+        <img src="./照片/(580).png">
+        <img src="./照片/(581).png">
+        <img src="./照片/(582).png">
+        <img src="./照片/(583).png">
+        <img src="./照片/(584).png">
+        <img src="./照片/(585).png">
+        <img src="./照片/(586).png">
+        <img src="./照片/(587).png">
+        <img src="./照片/(588).png">
+        <img src="./照片/(589).png">
+        <img src="./照片/(590).png">
+        <img src="./照片/(591).png">
+        <img src="./照片/(592).png">
+        <img src="./照片/(593).png">
+        <img src="./照片/(594).png">
+        <img src="./照片/(595).png">
+        <img src="./照片/(596).png">
+        <img src="./照片/(597).png">
+        <img src="./照片/(598).png">
+        <img src="./照片/(599).png">
+        <img src="./照片/(600).png">
+        <img src="./照片/(601).png">
+        <img src="./照片/(602).png">
+        <img src="./照片/(603).png">
+        <img src="./照片/(604).png">
+        <img src="./照片/(605).png">
+        <img src="./照片/(606).png">
+        <img src="./照片/(607).png">
+        <img src="./照片/(608).png">
+        <img src="./照片/(609).png">
+        <img src="./照片/(610).png">
+        <img src="./照片/(611).png">
+        <img src="./照片/(612).png">
+        <img src="./照片/(613).png">
+        <img src="./照片/(614).png">
+        <img src="./照片/(615).png">
+        <img src="./照片/(616).png">
+        <img src="./照片/(617).png">
+        <img src="./照片/(618).png">
+        <img src="./照片/(619).png">
+        <img src="./照片/(620).png">
+        <img src="./照片/(621).png">
+        <img src="./照片/(622).png">
+        <img src="./照片/(623).png">
+        <img src="./照片/(624).png">
+        <img src="./照片/(625).png">
+        <img src="./照片/(626).png">
+        <img src="./照片/(627).png">
+        <img src="./照片/(628).png">
+        <img src="./照片/(629).png">
+        <img src="./照片/(630).png">
+        <img src="./照片/(631).png">
+        <img src="./照片/(632).png">
+        <img src="./照片/(633).png">
+        <img src="./照片/(634).png">
+        <img src="./照片/(635).png">
+        <img src="./照片/(636).png">
+        <img src="./照片/(637).png">
+        <img src="./照片/(638).png">
+        <img src="./照片/(639).png">
+        <img src="./照片/(640).png">
+        <img src="./照片/(641).png">
+        <img src="./照片/(642).png">
+        <img src="./照片/(643).png">
+        <img src="./照片/(644).png">
+        <img src="./照片/(645).png">
+        <img src="./照片/(646).png">
+        <img src="./照片/(647).png">
+        <img src="./照片/(648).png">
+        <img src="./照片/(649).png">
+        <img src="./照片/(650).png">
+        <img src="./照片/(651).png">
+        <img src="./照片/(652).png">
+        <img src="./照片/(653).png">
+        <img src="./照片/(654).png">
+        <img src="./照片/(655).png">
+        <img src="./照片/(656).png">
+        <img src="./照片/(657).png">
+        <img src="./照片/(658).png">
+        <img src="./照片/(659).png">
+        <img src="./照片/(660).png">
+        <img src="./照片/(661).png">
+        <img src="./照片/(662).png">
+        <img src="./照片/(663).png">
+        <img src="./照片/(664).png">
+        <img src="./照片/(665).png">
+        <img src="./照片/(666).png">
+        <img src="./照片/(667).png">
+        <img src="./照片/(668).png">
+        <img src="./照片/(669).png">
+        <img src="./照片/(670).png">
+        <img src="./照片/(671).png">
+        <img src="./照片/(672).png">
+        <img src="./照片/(673).png">
+        <img src="./照片/(674).png">
+        <img src="./照片/(675).png">
+        <img src="./照片/(676).png">
+        <img src="./照片/(677).png">
+        <img src="./照片/(678).png">
+        `;
+    }else{
+        alert("密码错误");
+        imgContainer.innerHTML = `
+        <p>密码错误, 正在跳转到首页</p>
+        <meta http-equiv="refresh" content="3;url=https://xyz18950377305.github.io/">
+        `;
+    }
+</script>
+<hr>
+<div class="left-aligned">
+    <p>【我的网站】版权所有。网站内容仅供参考，【我的网站】不对其安全性、可靠性、可用性等任何方面提供任何明示或暗示。【我的网站】保留修改、删除、更新网站内容等所有权力。</p>
+</div>
+</body>
+</html>
