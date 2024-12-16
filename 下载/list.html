@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<title>我的网站-首页</title>
+<title>我的网站-下载</title>
 <link rel="icon" href="../favicon.png" type="image/png">
 <style>
     body {
@@ -12,9 +12,14 @@
         padding: 20px; /* 增加内边距 */
     }
     h1 {
-    color: skyblue; /* 标题颜色 */
-    text-align: center; /* 居中对齐 */
-    font-size: 48px; /* 增大字体大小 */
+        color: skyblue; /* 标题颜色 */
+        text-align: center; /* 居中对齐 */
+        font-size: 48px; /* 增大字体大小 */
+    }
+    h2 {
+        color: deepskyblue; /* 标题颜色 */
+        text-align: center;
+        font-size: 28px; /* 增大字体大小 */
     }
     hr {
         margin: 20px 0; /* 上下外边距 */
@@ -87,6 +92,31 @@
         font-size: 18px; /* 确保与链接的字体大小一致 */
         color: black; /* 确保文本颜色与设计一致 */
     }
+    .table-style {
+    margin: auto;            /* 水平居中 */
+    width: 80%;             /* 宽度为80% */
+    border-collapse: collapse; /* 合并边框 */
+    }
+    .table-style th {
+    border: 2px solid dodgerblue; /* 设置单元格边框 */
+    padding: 10px;               /* 单元格内边距 */
+    font-size: 22px;             /* 设置表头文字大小 */
+    color: dodgerblue;           /* 设置表头文字颜色 */
+    }
+    .table-style td {
+        border: 2px solid dodgerblue; /* 设置单元格边框 */
+        padding: 10px;               /* 单元格内边距 */
+        font-size: 18px;             /* 设置单元格文字大小 */
+        color: black;                /* 设置单元格文字颜色 */
+    }
+    .table-style a {
+        color: deepskyblue; /* 链接颜色 */
+        font-size: 18px; /* 字体大小 */
+        transition: color 0.3s; /* 颜色过渡效果 */
+    }
+    .table-style a:hover {
+        color: royalblue; /* 悬停时链接颜色 */
+    }
 </style>
 </head>
 <body>
@@ -95,27 +125,49 @@
     我的网站
 </h1>
 <div class="navbar">
-    <a href="../首页" style="color: yellow;">首页</a>
+    <a href="../首页">首页</a>
     <a href="../文章">文章</a>
-    <a href="../下载">下载</a>
+    <a href="../下载" style="color: yellow;">下载</a>
     <a href="../联系">联系</a>
 </div>
 <br>
-<img id="dynamicImage" src="../bg.webp" style="width: 100%; height: auto;">
-<script>
-    const bodyWidth = document.body.clientWidth; // 获取 <body> 元素的宽度
-    // 获取内边距
-    const paddingLeft = parseFloat(getComputedStyle(document.body).paddingLeft);
-    const paddingRight = parseFloat(getComputedStyle(document.body).paddingRight);
-    const contentWidth = bodyWidth - paddingLeft - paddingRight; // 计算不包含内边距的内容宽度
-    document.getElementById('dynamicImage').style.width = contentWidth + 'px'; // 设置 img 的宽度
-</script>
-<hr>
-<div class="left-aligned">
-    <p>
-        
-    </p>
-</div>
+<a href="./">
+    <button>返回</button>
+</a>
+<h2>下载列表</h2>
+<table class="table-style">
+    <thead>
+        <tr>
+            <th>软件名称</th>
+            <th>发布日期</th>
+            <th>下载链接</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                沙威玛传奇
+            </td>
+            <td>
+                2024-11-20
+            </td>
+            <td>
+                <a href="https://xyz18950377305.lanzouo.com/iTPwc2fk3tza" target="_blank">蓝奏云链接</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                接金币
+            </td>
+            <td>
+                2024-11-22
+            </td>
+            <td>
+                <a href="https://xyz18950377305.lanzouo.com/iEhyZ2fsc9da" target="_blank">蓝奏云链接</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 <hr>
 <div class="left-aligned">
     <p>【我的网站】版权所有。网站内容仅供参考，【我的网站】不对其安全性、可靠性、可用性等任何方面提供任何明示或暗示。【我的网站】保留修改、删除、更新网站内容等所有权力。</p>
