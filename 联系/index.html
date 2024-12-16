@@ -12,8 +12,9 @@
         padding: 20px; /* 增加内边距 */
     }
     h1 {
-        color: skyblue; /* 标题颜色 */
-        text-align: center;
+    color: skyblue; /* 标题颜色 */
+    text-align: center; /* 居中对齐 */
+    font-size: 48px; /* 增大字体大小 */
     }
     hr {
         margin: 20px 0; /* 上下外边距 */
@@ -90,15 +91,25 @@
 </head>
 <body>
 <h1>
-    <img src="../favicon.png" style="width: 40px; height: auto; margin-bottom: -10px;">
+    <img src="../favicon.png" style="width: 44px; height: auto; margin-bottom: -4px;">
     我的网站
 </h1>
 <div class="navbar">
     <a href="../首页">首页</a>
     <a href="../文章">文章</a>
     <a href="../下载">下载</a>
-    <a href="../联系">联系</a>
+    <a href="../联系" style="color: yellow;">联系</a>
 </div>
+<br>
+<img id="dynamicImage" src="../bg.webp" style="height: auto;">
+<script>
+    const bodyWidth = document.body.clientWidth; // 获取 <body> 元素的宽度
+    // 获取内边距
+    const paddingLeft = parseFloat(getComputedStyle(document.body).paddingLeft);
+    const paddingRight = parseFloat(getComputedStyle(document.body).paddingRight);
+    const contentWidth = bodyWidth - paddingLeft - paddingRight; // 计算不包含内边距的内容宽度
+    document.getElementById('dynamicImage').style.width = contentWidth + 'px'; // 设置 img 的宽度
+</script>
 <hr>
 <div class="button-container">
     <a href="https://space.bilibili.com/3546770405591755" target="_blank">

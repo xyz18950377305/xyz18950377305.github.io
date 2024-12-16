@@ -13,7 +13,8 @@
     }
     h1 {
         color: skyblue; /* 标题颜色 */
-        text-align: center;
+        text-align: center; /* 居中对齐 */
+        font-size: 48px; /* 增大字体大小 */
     }
     hr {
         margin: 20px 0; /* 上下外边距 */
@@ -90,55 +91,65 @@
 </head>
 <body>
 <h1>
-    <img src="../favicon.png" style="width: 40px; height: auto; margin-bottom: -10px;">
+    <img src="../favicon.png" style="width: 44px; height: auto; margin-bottom: -4px;">
     我的网站
 </h1>
 <div class="navbar">
     <a href="../首页">首页</a>
-    <a href="../文章">文章</a>
+    <a href="../文章" style="color: yellow;">文章</a>
     <a href="../下载">下载</a>
     <a href="../联系">联系</a>
 </div>
+<br>
+<img id="dynamicImage" src="../bg.webp" style="height: auto;">
+<script>
+    const bodyWidth = document.body.clientWidth; // 获取 <body> 元素的宽度
+    // 获取内边距
+    const paddingLeft = parseFloat(getComputedStyle(document.body).paddingLeft);
+    const paddingRight = parseFloat(getComputedStyle(document.body).paddingRight);
+    const contentWidth = bodyWidth - paddingLeft - paddingRight; // 计算不包含内边距的内容宽度
+    document.getElementById('dynamicImage').style.width = contentWidth + 'px'; // 设置 img 的宽度
+</script>
 <hr>
 <div class="styled-link">
     <p>
-        <a href="./P01.html">P01</a>
+        <a href="./文章/P01.html">P01</a>
         我的网站简介
     </p>
     <p>
-        <a href="./P02.html">P02</a>
+        <a href="./文章/P02.html">P02</a>
         (未开放)
     </p>
     <p>
-        <a href="./P03.html">P03</a>
+        <a href="./文章/P03.html">P03</a>
         (未开放)
     </p>
     <p>
-        <a href="./P04.html">P04</a>
+        <a href="./文章/P04.html">P04</a>
         (未开放)
     </p>
     <p>
-        <a href="./P05.html">P05</a>
+        <a href="./文章/P05.html">P05</a>
         (未开放)
     </p>
     <p>
-        <a href="./P06.html">P06</a>
+        <a href="./文章/P06.html">P06</a>
         (未开放)
     </p>
     <p>
-        <a href="./P07.html">P07</a>
+        <a href="./文章/P07.html">P07</a>
         (未开放)
     </p>
     <p>
-        <a href="./P08.html">P08</a>
+        <a href="./文章/P08.html">P08</a>
         (未开放)
     </p>
     <p>
-        <a href="./P09.html">P09</a>
+        <a href="./文章/P09.html">P09</a>
         (未开放)
     </p>
     <p>
-        <a href="./P10.html">P10</a>
+        <a href="./文章/P10.html">P10</a>
         (未开放)
     </p>
 </div>
