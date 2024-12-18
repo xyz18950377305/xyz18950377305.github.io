@@ -101,15 +101,6 @@
     <a href="../联系">联系</a>
 </div>
 <br>
-<img id="dynamicImage" src="../bg.webp" style="width: 100%; height: auto;">
-<script>
-    const bodyWidth = document.body.clientWidth; // 获取 <body> 元素的宽度
-    // 获取内边距
-    const paddingLeft = parseFloat(getComputedStyle(document.body).paddingLeft);
-    const paddingRight = parseFloat(getComputedStyle(document.body).paddingRight);
-    const contentWidth = bodyWidth - paddingLeft - paddingRight; // 计算不包含内边距的内容宽度
-    document.getElementById('dynamicImage').style.width = contentWidth + 'px'; // 设置 img 的宽度
-</script>
 <hr>
 <div class="styled-link">
     <p>
