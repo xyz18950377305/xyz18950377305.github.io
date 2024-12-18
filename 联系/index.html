@@ -101,22 +101,26 @@
     <a href="../联系" style="color: yellow;">联系</a>
 </div>
 <br>
+<script>
+    const bodyWidth = document.body.clientWidth; // 获取 <body> 元素的宽度
+    // 获取内边距
+    const paddingLeft = parseFloat(getComputedStyle(document.body).paddingLeft);
+    const paddingRight = parseFloat(getComputedStyle(document.body).paddingRight);
+    const contentWidth = bodyWidth - paddingLeft - paddingRight; // 计算不包含内边距的内容宽度
+    document.getElementById('dynamicImage').style.width = contentWidth + 'px'; // 设置 img 的宽度
+</script>
 <hr>
 <div class="button-container">
     <a href="https://space.bilibili.com/3546770405591755" target="_blank">
         <button>bilibili</button>
     </a>
-    <br>
     <a href="https://github.com/xyz18950377305" target="_blank">
         <button>GitHub</button>
     </a>
-    <br>
     <hr>
-    <br>
     <a href="https://forms.office.com/r/PtbJznmRa0" target="_blank">
         <button>意见反馈</button>
     </a>
-    <br>
     <a href="https://forms.office.com/r/AMMFxYuWA6" target="_blank">
         <button>想法创意</button>
     </a>
