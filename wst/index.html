@@ -97,15 +97,8 @@
 </style>
 </head>
 <body>
-<h1>
-    <img src="../favicon.png" style="width: 40px; height: auto; margin-bottom: -10px;">
-    我的网站
-</h1>
 <div class="navbar">
-    <a href="../首页">首页</a>
-    <a href="../文章">文章</a>
-    <a href="../下载">下载</a>
-    <a href="../联系">联系</a>
+    <a href="../首页" class="navbar">首页</a>
 </div>
 <hr>
 <div id="imgContainer" class="left-aligned">
@@ -113,7 +106,6 @@
 <script>
     document.getElementById("imgContainer");
     password = prompt("请输入密码");
-
     if (password == "0017"){
         alert("密码正确");
         imgContainer.innerHTML = `
@@ -136,7 +128,7 @@
         <img src="./image13.png">
         <img src="./image17.png">
         <img src="./image14.png">
-        <img src="./image15.png">
+        <img src="./image15x.png">
         `;
     }else{
         alert("密码错误");
@@ -146,9 +138,5 @@
         `;
     }
 </script>
-<hr>
-<div class="left-aligned">
-    <p>【我的网站】版权所有。网站内容仅供参考，【我的网站】不对其安全性、可靠性、可用性等任何方面提供任何明示或暗示。【我的网站】保留修改、删除、更新网站内容等所有权力。</p>
-</div>
 </body>
 </html>
