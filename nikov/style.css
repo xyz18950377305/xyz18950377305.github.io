@@ -1,4 +1,22 @@
-@import url('../tapple/main.css');
+.box.card{
+    border-radius: 12px;
+    /* box-shadow: 5px 5px 10px #0000000f; */
+    margin: 8px;
+    background-color: #7f7f7f20;
+    padding: 10px 20px;
+}
+
+.box.card>.tit{
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin: 10px 0;
+    text-align: start;
+}
+
+.box.card>.tit.center{
+    text-align: center;
+}
 
 .card {
     backdrop-filter: blur(15px);
