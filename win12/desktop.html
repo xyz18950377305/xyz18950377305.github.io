@@ -204,17 +204,6 @@ toggletheme() 切换主题
 	</div>
 	<!-- <img src="https://bing.com/th?id=OHR.Trossachs_ZH-CN9299955040_UHD.jpg&qlt=100" alt=""> -->
 	<script src="./scripts/jq.min.js"></script>
-	<div id="voiceBall" class="draggable no-drag" style="top: 80%;left: 80%;">
-        <link rel="stylesheet" href="./style.css">
-
-        <div class="rainbow-container-main">
-            <div class="rainbow-container">
-                <div class="green"></div>
-                <div class="pink"></div>
-                <div class="blue"></div>
-            </div>
-        </div>
-    </div>
 
     <!-- <script>
     </script> -->
@@ -625,54 +614,6 @@ toggletheme() 切换主题
 				</div>
 			</div>
 		</div>
-		<span class="hr"></span>
-		<div class="news">
-			<div class="bar">
-				<p class="tit">新闻</p>
-				<div>
-					<span style="color: #7f7f7f;margin-right: 5px;margin-top: 2px;">我们不对新闻内容负责</span>
-					<button onclick="shownotice('widgets.news.source')" class="a act btn btn-icon big"
-						style="background: linear-gradient(100deg, var(--theme-1), var(--theme-2));color:#fff;"
-						win12_title="切换新闻源"><i class="bi bi-arrow-repeat"></i></button>
-				</div>
-			</div>
-			<div class="full-tip">
-				<loading>
-					<svg width="30px" height="30px" viewBox="0 0 16 16">
-						<circle cx="8px" cy="8px" r="7px" style="stroke:#7f7f7f50;fill:none;stroke-width:3px;"></circle>
-						<circle cx="8px" cy="8px" r="7px" style="stroke:#2983cc;stroke-width:3px;"></circle>
-					</svg>
-				</loading>
-				<p class="tit"></p>
-				<p class="desc"></p>
-				<p class="info"></p>
-			</div>
-			<div class="content">
-				<div class="card top-news"></div>
-				<div class="news-all"></div>
-			</div>
-		</div>
-	</div>
-	<div id="copilot">
-		<div class="titbar">
-			<p class="text">Windows 12 Copilot</p>
-			<div class="alr">
-				<span class="btn about" onclick="shownotice('about-copilot')">
-					<i class="bi bi-info-circle"></i>
-				</span>
-				<span class="btn hide" onclick="$('#copilot').removeClass('show')">
-					<i class="bi bi-chevron-bar-right"></i>
-				</span>
-			</div>
-		</div>
-		<div class="chat">
-			<a class="a btn button" onclick="copilot.init()">开始对话</a>
-			<p style="margin-top: 20px;">新版 AI Copilot 终于上线了！该 AI 由 github@NB-Group 开发与维护<br>(AI Copilot因各种原因，暂停使用)<br>使用前请先阅读'>|'左侧的使用事项</p>
-		</div>
-		<div class="inputbox disable">
-			<input type="text" class="input" onkeydown="if(event.keyCode==13){copilot.send($(this).val());$(this).val('');this.blur()}">
-			<a class="a send btn" onclick="copilot.send($('#copilot>.inputbox>.input').val());$('#copilot>.inputbox>.input').val('');">发送</a>
-		</div>
 	</div>
 	<div id="control">
 		<div class="cont">
@@ -780,9 +721,6 @@ toggletheme() 切换主题
 				<svg viewBox="0,0,174,298" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden" class="wid3"><defs><filter id="fx0" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="discrete" tableValues="0 0"/><feFuncG type="discrete" tableValues="0 0"/><feFuncB type="discrete" tableValues="0 0"/><feFuncA type="linear" slope="0.4" intercept="0"/></feComponentTransfer><feGaussianBlur stdDeviation="5.81079 5.7971"/></filter><filter id="fx1" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="discrete" tableValues="0 0"/><feFuncG type="discrete" tableValues="0 0"/><feFuncB type="discrete" tableValues="0 0"/><feFuncA type="linear" slope="0.4" intercept="0"/></feComponentTransfer><feGaussianBlur stdDeviation="4 4"/></filter><filter id="fx2" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="discrete" tableValues="0 0"/><feFuncG type="discrete" tableValues="0 0"/><feFuncB type="discrete" tableValues="0 0"/><feFuncA type="linear" slope="0.4" intercept="0"/></feComponentTransfer><feGaussianBlur stdDeviation="4 4"/></filter><filter id="fx3" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="discrete" tableValues="0 0"/><feFuncG type="discrete" tableValues="0 0"/><feFuncB type="discrete" tableValues="0 0"/><feFuncA type="linear" slope="0.4" intercept="0"/></feComponentTransfer><feGaussianBlur stdDeviation="4 4"/></filter><clipPath id="clip-wid3-4"><rect x="498" y="214" width="174" height="298"/></clipPath><clipPath id="clip-wid3-5"><rect x="-6.53714" y="-6.52174" width="98.0572" height="162.04"/></clipPath><clipPath id="clip-wid3-6"><rect x="0" y="0" width="88" height="150"/></clipPath><linearGradient x1="668.609" y1="288.246" x2="496.391" y2="432.754" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="fill-wid3-7"><stop offset="0" stop-color="#C45DD5"/><stop offset="0.18" stop-color="#C45DD5"/><stop offset="0.69" stop-color="#A266E4"/><stop offset="1" stop-color="#A266E4"/></linearGradient><clipPath id="clip-wid3-8"><rect x="-5" y="-5" width="86" height="42"/></clipPath><clipPath id="clip-wid3-9"><rect x="0" y="0" width="77" height="35"/></clipPath><clipPath id="clip-wid3-10"><rect x="-5" y="-5" width="67" height="42"/></clipPath><clipPath id="clip-wid3-11"><rect x="0" y="0" width="58" height="35"/></clipPath><clipPath id="clip-wid3-12"><rect x="-5" y="-5" width="92" height="42"/></clipPath><clipPath id="clip-wid3-13"><rect x="0" y="0" width="85" height="35"/></clipPath></defs><g clip-path="url(#clip-wid3-4)" transform="translate(-498 -214)"><g clip-path="url(#clip-wid3-5)" filter="url(#fx0)" transform="matrix(1.98864 0 0 1.99333 498 214)"><g clip-path="url(#clip-wid3-6)" transform="translate(2.84217e-14 -1.42109e-14)"><path d="M18.0166 36.3921C18.0166 26.2201 26.2821 17.9741 36.4781 17.9741L51.3493 17.9741C61.5454 17.9741 69.8109 26.2201 69.8109 36.3921L69.8109 113.436C69.8109 123.608 61.5454 131.854 51.3493 131.854L36.4781 131.854C26.2821 131.854 18.0166 123.608 18.0166 113.436Z" fill="#FF0000" fill-rule="evenodd"/></g></g><path d="M531 283.713C531 263.437 547.437 247 567.713 247L597.287 247C617.563 247 634 263.437 634 283.713L634 437.287C634 457.563 617.563 474 597.287 474L567.713 474C547.437 474 531 457.563 531 437.287Z" fill="url(#fill-wid3-7)" fill-rule="evenodd"/><g clip-path="url(#clip-wid3-8)" filter="url(#fx1)" transform="translate(534 259)"><g clip-path="url(#clip-wid3-9)"><path d="M17.3857 17.3857 59.5683 17.3858" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/></g></g><path d="M549.5 274.5 591.683 274.5" stroke="#FFFFFF" stroke-width="8.66667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><g clip-path="url(#clip-wid3-10)" filter="url(#fx2)" transform="translate(534 281)"><g clip-path="url(#clip-wid3-11)"><path d="M17.3857 17.3857 40.3525 17.3858" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/></g></g><path d="M549.5 296.5 572.467 296.5" stroke="#FFFFFF" stroke-width="8.66667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><g clip-path="url(#clip-wid3-12)" filter="url(#fx3)" transform="translate(534 302)"><g clip-path="url(#clip-wid3-13)"><path d="M17.3857 17.3857 67.3293 17.3858" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/></g></g><path d="M549.5 317.5 599.444 317.5" stroke="#FFFFFF" stroke-width="8.66667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/></g></svg>
 				<svg viewBox="0,0,141,113" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden" class="wid4"><defs><filter id="fx0" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="discrete" tableValues="0 0"/><feFuncG type="discrete" tableValues="0 0"/><feFuncB type="discrete" tableValues="0 0"/><feFuncA type="linear" slope="0.4" intercept="0"/></feComponentTransfer><feGaussianBlur stdDeviation="5.77778 5.77778"/></filter><filter id="fx1" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="discrete" tableValues="0 0"/><feFuncG type="discrete" tableValues="0 0"/><feFuncB type="discrete" tableValues="0 0"/><feFuncA type="linear" slope="0.4" intercept="0"/></feComponentTransfer><feGaussianBlur stdDeviation="4 4"/></filter><clipPath id="clip-wid4-2"><rect x="629" y="380" width="141" height="113"/></clipPath><clipPath id="clip-wid4-3"><rect x="-6" y="-3" width="154" height="121"/></clipPath><clipPath id="clip-wid4-4"><rect x="0" y="0" width="143" height="115"/></clipPath><linearGradient x1="670.387" y1="386.075" x2="728.613" y2="486.925" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="fill-wid4-5"><stop offset="0" stop-color="#D854CB"/><stop offset="0.13" stop-color="#D854CB"/><stop offset="1" stop-color="#A266E4"/></linearGradient><clipPath id="clip-wid4-6"><rect x="-5" y="-5" width="105" height="69"/></clipPath><clipPath id="clip-wid4-7"><rect x="0" y="0" width="98" height="63"/></clipPath></defs><g clip-path="url(#clip-wid4-2)" transform="translate(-629 -380)"><g clip-path="url(#clip-wid4-3)" filter="url(#fx0)" transform="translate(628 379)"><g clip-path="url(#clip-wid4-4)"><path d="M18.97 46.5177C18.97 31.4582 31.1781 19.25 46.2377 19.25L96.7623 19.25C111.822 19.25 124.03 31.4582 124.03 46.5177L124.03 68.4823C124.03 83.5418 111.822 95.75 96.7623 95.75L46.2377 95.75C31.1781 95.75 18.97 83.5418 18.97 68.4823Z" fill="#FF0000" fill-rule="evenodd"/></g></g><path d="M648 425.733C648 410.969 659.969 399 674.733 399L724.267 399C739.031 399 751 410.969 751 425.733L751 447.267C751 462.031 739.031 474 724.267 474L674.733 474C659.969 474 648 462.031 648 447.267Z" fill="url(#fill-wid4-5)" fill-rule="evenodd"/><g clip-path="url(#clip-wid4-6)" filter="url(#fx1)" transform="translate(653 407)"><g clip-path="url(#clip-wid4-7)"><path d="M17.3857 45.3857C24.6516 31.6825 31.9177 17.9794 39.5617 17.3963 47.2057 16.8131 56.4457 40.5542 63.2497 41.887 70.0537 43.2198 79.3357 31.3285 80.3857 25.3933" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/></g></g><path d="M668.5 450.5C675.766 436.797 683.032 423.094 690.676 422.511 698.32 421.928 707.56 445.669 714.364 447.001 721.168 448.334 730.45 436.443 731.5 430.508" stroke="#FFFFFF" stroke-width="8.66667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/></g></svg>
 			</a>
-			<a class="dock-btn" onclick="$('#copilot').toggleClass('show');$(this).toggleClass('show')" id="copilot-btn">
-				<!--copilot按钮-->
-			<img src="icon/copilot.svg"></a>
 		</div>
 		<div class="dock" id="taskbar" style="display: none;" count="0">
 		</div>
@@ -820,17 +758,10 @@ toggletheme() 切换主题
 			<img src="icon/setting.svg">
 			<p>设置</p>
 		</div>
-		<div class="b" ondblclick="openapp('about');" ontouchstart="openapp('about');" oncontextmenu="return showcm(event,'desktop.icon',['about',-1]);" appname="about">
-			<img src="icon/about.svg">
-			<p>关于 Win12 网页版</p>
-		</div>
 		<div class="b" ondblclick="openapp('edge');" ontouchstart="openapp('edge');" oncontextmenu="return showcm(event,'desktop.icon',['edge',-1]);" appname="edge">
 			<img src="icon/edge.svg">
 			<p>Microsoft Edge</p>
 		</div>
-		<div class="b" ondblclick="shownotice('feedback');" ontouchstart="shownotice('feedback');;">
-			<img src="icon/feedback.svg">
-			<p>反馈中心</p>
 		</div>
 		<span class="choose">
 		</span>
@@ -2281,7 +2212,7 @@ toggletheme() 切换主题
 			<img src="icon/wsa.png" class="icon">
 		</div>
 		<div class="content" id="win-wsa" style="margin-bottom:auto;">
-			<iframe src="https://android11react.osrc.com/" frameborder="0" style=" width: 100%;height: 100%;" loading="lazy"></iframe>
+			<iframe src="https://android.blueedge.me/" frameborder="0" style=" width: 100%;height: 100%;" loading="lazy"></iframe>
 		</div>
 	</div>
 	<div class="window pythonEditor">

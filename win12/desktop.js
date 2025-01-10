@@ -2876,100 +2876,6 @@ Micrȯsoft Windows [版本 12.0.39035.7324]
     }
 };
 
-// 语音球
-
-var voiceBall = document.getElementById("voiceBall");
-var nbFlag = true;
-var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-var isDragging = false;
-
-voiceBall.addEventListener("mousedown", dragMouseDown);
-voiceBall.addEventListener("mouseup", stopDrag);
-
-function dragMouseDown(e) {
-    e.preventDefault();
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.addEventListener("mousemove", elementDrag);
-    isDragging = false;
-}
-
-function elementDrag(e) {
-    e.preventDefault();
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    voiceBall.style.top = (voiceBall.offsetTop - pos2) + "px";
-    voiceBall.style.left = (voiceBall.offsetLeft - pos1) + "px";
-    isDragging = true;
-}
-
-function stopDrag() {
-    document.removeEventListener("mousemove", elementDrag);
-    if (!isDragging) {
-        startSpeechRecognition();
-    }
-}
-
-function insertTextAtCursor(text) {
-    var range, selection;
-    
-    if (window.getSelection) {
-        selection = window.getSelection();
-        
-        if (selection.rangeCount) {
-        range = selection.getRangeAt(0);
-        
-            if (range.commonAncestorContainer.parentNode.isContentEditable) {
-                range.collapse(false);
-                var textNode = document.createTextNode(text);
-                range.insertNode(textNode);
-                
-                range.setEndAfter(textNode);
-                range.setStartAfter(textNode);
-                selection.removeAllRanges();
-                selection.addRange(range);
-            }
-            else{
-                var el = document.activeElement;
-                var start = el.selectionStart;
-                var end = el.selectionEnd;
-                var value = el.value;
-                var newText = value.slice(0, start) + text + value.slice(end);
-                el.value = newText;
-                el.selectionStart = el.selectionEnd = start + text.length;
-
-            }
-        }
-    }
-}
-
-function startSpeechRecognition() {
-    var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
-    recognition.lang = "zh-CN";
-
-    if (nbFlag)
-    {
-        shownotice("recognition");
-        nbFlag=false;
-    }
-    else
-    {
-        recognition.onresult = function (event) {
-            var result = event.results[0][0].transcript;
-            insertTextAtCursor(result);
-        };
-
-        recognition.start();
-    }
-
-}
-
-function updateVoiceBallStatus() {
-    document.getElementById('voiceBall').style.setProperty('display', use_mic_voice ? 'block' : 'none');
-}
-
 // 小组件功能
 let widgets = {
     widgets: {
@@ -4204,17 +4110,9 @@ function setIcon() {
         <img src="icon/setting.svg">
         <p>设置</p>
     </div>
-    <div class="b" ondblclick="openapp('about');" ontouchstart="openapp('about');" oncontextmenu="return showcm(event,'desktop.icon',['about',-1]);" appname="about">
-        <img src="icon/about.svg">
-        <p>关于 Win12 网页版</p>
-    </div>
     <div class="b" ondblclick="openapp('edge');" ontouchstart="openapp('edge');" oncontextmenu="return showcm(event,'desktop.icon',['edge',-1]);" appname="edge">
         <img src="icon/edge.svg">
         <p>Microsoft Edge</p>
-    </div>
-    <div class="b" ondblclick="shownotice('feedback');" ontouchstart="shownotice('feedback');;">
-        <img src="icon/feedback.svg">
-        <p>反馈中心</p>
     </div>
     <span class="choose">
     </span>
