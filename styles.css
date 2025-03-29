@@ -59,7 +59,9 @@ button:hover {
     }
 .text-content p {
     font-size: 18px; /* 字体大小 */
-    color: black; /* 字体颜色 */
+}
+.text-content a {
+    font-size: 18px; /* 字体大小 */
 }
 .left-aligned {
     text-align: left; /* 左对齐文本 */
