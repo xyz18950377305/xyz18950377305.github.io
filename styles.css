@@ -33,7 +33,7 @@ hr {
     flex-wrap: wrap; /* 允许按钮换行 */
 }
 .button-container hr {
-    margin: 10px 0; /* 上下左右外边距 */
+    margin: 0 10px 0 0; /* 上下左右外边距 */
     border: 1px solid gainsboro; /* 分隔线样式 */
     width: 0;
     height: 60px;
