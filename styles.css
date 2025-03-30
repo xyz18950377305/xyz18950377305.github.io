@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: white; /* 背景颜色 */
     margin: 0; /* 去掉默认外边距 */
-    padding: 20px; /* 增加内边距 */
+    padding: 10px; /* 增加内边距 */
 }
 h1 {
     color: skyblue; /* 标题颜色 */
