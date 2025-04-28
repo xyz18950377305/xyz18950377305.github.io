@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 基础元数据 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI聊天助手</title>
+    
+    <!-- Favicon 图标 -->
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- 外部样式表链接 -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- 移动端优化 -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 头部区域 -->
+        <header>
+            <!-- 主标题 -->
+            <h1>AI助手</h1>
+            
+            <!-- 模型选择控制区 -->
+            <div class="model-selector">
+                <!-- 模型选择标签 -->
+                <label for="model-select">选择模型：</label>
+                
+                <!-- 模型选择下拉框 -->
+                <select id="model-select" aria-label="选择AI模型">
+                    <option value="deepseek-chat">DeepSeek V3</option>
+                    <option value="deepseek-reasoner">DeepSeek R1</option>
+                </select>
+                
+                <!-- 清空聊天按钮 -->
+                <button class="clear-btn" id="clear-chat" aria-label="清空聊天记录">清空聊天</button>
+                
+                <!-- 意见反馈链接 -->
+                <a href="/联系/意见反馈.html" class="feedback-btn" target="_blank" rel="noopener noreferrer">意见反馈</a>
+            </div>
+        </header>
+        
+        <!-- 主内容区 -->
+        <main class="chat-wrapper">
+            <!-- 聊天消息显示区域 -->
+            <div class="chat-messages" id="chat-messages" role="log" aria-live="polite"></div>
+            
+            <!-- 输入指示器（默认隐藏） -->
+            <div class="typing-indicator" id="typing-indicator" aria-hidden="true">AI正在思考...</div>
+            
+            <!-- 输入控制区 -->
+            <div class="input-container">
+                <div class="input-area">
+                    <!-- 用户输入文本框 -->
+                    <textarea id="user-input" placeholder="输入你的问题..." rows="1" 
+                              aria-label="输入消息内容"></textarea>
+                    
+                    <!-- 发送/停止按钮 -->
+                    <button id="send-button" aria-label="发送消息">发送</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 外部JavaScript文件 -->
+    <script src="script.js" defer></script>
+</body>
+</html>
