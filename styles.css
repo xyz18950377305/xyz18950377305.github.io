@@ -1,7 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* 字体 */
     background-color: white; /* 背景颜色 */
     margin: 0; /* 去掉默认外边距 */
+    line-height: 1.4; /* 行高 */
 }
 h1 {
     color: skyblue; /* 标题颜色 */
@@ -22,31 +23,23 @@ hr {
 footer {
     border-top: 2px solid gainsboro; /* 分隔线样式 */
     text-align: center; /* 内容居中 */
-    line-height: 1.4; /* 行高，增加可读性 */
     padding: 20px; /* 内边距 */
     margin: 20px 0;
     color: gray; /* 文本颜色 */
 }
-a {
-    display: inline-block; /* 使链接成为块级元素，便于设置内边距和背景 */
-    background-color: skyblue; /* 背景颜色 */
-    color: white; /* 文字颜色 */
-    padding: 15px 25px;  /* 内边距 */
-    font-size: 16px;  /* 字体大小 */
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin: 10px 0; /* 外边距 */
-    text-decoration: none; /* 去掉下划线 */
-    line-height: 1; /* 行高 */
-}
-a:hover {
-    background-color: deepskyblue; /* 悬停时背景颜色 */
-}
 p {
-    font-size: 16px; /* 字体大小 */
+    font-size: 18px; /* 字体大小 */
     color: black; /* 文本颜色 */
     margin: 10px; /* 外边距 */
-    padding: 0; /* 内边距 */
+}
+a {
+    color: deepskyblue; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    font-size: 18px; /* 字体大小 */
+    transition: color 0.3s; /* 颜色过渡效果 */
+}
+a:hover {
+    color: dodgerblue; /* 悬停时链接颜色 */
 }
 table {
     margin: auto; /* 水平居中 */
@@ -65,22 +58,34 @@ td {
     font-size: 18px; /* 设置单元格文字大小 */
     color: black; /* 设置单元格文字颜色 */
 }
-table a {
-    all: unset; /* 重置所有默认样式 */
-    color: deepskyblue; /* 链接颜色 */
-    text-decoration: none; /* 去掉下划线 */
-    font-size: 18px; /* 字体大小 */
-    transition: color 0.3s; /* 颜色过渡效果 */
+ol, ul {
+    margin: 20px 0; /* 外边距 */
 }
-table a:hover {
-    all: unset; /* 重置所有默认样式 */
-    color: dodgerblue; /* 悬停时链接颜色 */
+li {
+    font-size: 18px; /* 字体大小 */
+    color: black; /* 文本颜色 */
+    margin: 20px 0; /* 外边距 */
 }
 
+a.btn {
+    all: unset; /* 重置所有默认样式 */
+    display: inline-block; /* 使链接成为块级元素，便于设置内边距和背景 */
+    background-color: skyblue; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    padding: 15px 25px;  /* 内边距 */
+    font-size: 18px;  /* 字体大小 */
+    border-radius: 5px; /* 圆角 */
+    transition: background-color 0.3s; /* 背景颜色过渡效果 */
+    margin: 10px 0; /* 外边距 */
+    text-decoration: none; /* 去掉下划线 */
+}
+a.btn:hover {
+    background-color: deepskyblue; /* 悬停时背景颜色 */
+}
 .navbar {
     background-color: skyblue; /* 导航栏背景颜色 */
     overflow: hidden; /* 清除浮动 */
-    padding: 0px 15px; /* 导航栏内边距 */
+    padding: 0 20px; /* 导航栏内边距 */
 }
 .content {
     padding: 20px; /* 内容内边距 */
@@ -104,9 +109,4 @@ table a:hover {
     margin: 20px; /* 外边距 */
     padding: 0; /* 内边距 */
 }
-.text-content p {
-    font-size: 18px; /* 字体大小 */
-}
-.text-content a {
-    font-size: 18px; /* 字体大小 */
-}
+
