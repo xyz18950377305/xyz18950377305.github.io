@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<meta charset="UTF-8">
-<title>XYZ网站-文章</title>
-<link rel="icon" href="/favicon.png" type="image/png">
-<link rel="stylesheet" href="/styles.css" type="text/css">
-<style>
-    
-</style>
+    <meta charset="UTF-8">
+    <title>XYZ网站-文章</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/styles.css" type="text/css">
+    <style>
+        .text {
+            line-height: 1.6;
+        }
+        .text p {
+            text-indent: 2em;
+        }
+    </style>
 </head>
 <body>
-<h1>
-    <img src="/favicon.png" style="width: 45px; height: auto; margin-bottom: -5px;">
-    XYZ网站
-</h1>
-<div class="navbar">
+    <h1>
+        <img src="/favicon.png" style="width: 45px; height: auto; margin-bottom: -5px;">
+        XYZ网站
+    </h1>
+    <div class="navbar">
+        <a class="btn" href="/首页">首页</a>
+        <a class="btn" href="/文章" style="color: yellow;">文章</a>
+        <a class="btn" href="/下载/list.html">下载</a>
+        <a class="btn" href="/联系">联系</a>
+    </div>
+    <div class="content">
+        <a class="btn" href="../">返回</a>
+        
+        <h2 id="title">
+            我的网站简介
+        </h2>
 
-    <a href="/首页">
-        <button>首页</button>
-    </a>
-    <a href="/文章">
-        <button style="color: yellow;">文章</button>
-    </a>
-    <a href="/下载/list.html">
-        <button>下载</button>
-    </a>
-    <a href="/联系">
-        <button>联系</button>
-    </a>
-    <a href="/登录" target="_blank">
-        <button>登录</button>
-    </a>
-</div>
-<hr>
-<a href="../">
-    <button>返回</button>
-</a>
-<h2>
-    P01 我的网站简介
-</h2>
-<div class="left-aligned">
-    <p>
-        欢迎来到“我的网站”！这是一个基于GitHub Pages的个人网站平台，主要栏目包括：
-        <br>
-        首页：访问最新的内容。
-        <br>
-        文章：(测试)
-        <br>
-        下载：提供一些好东西的下载链接。
-        <br>
-        联系：您可以提供反馈、建议或者关注我的账号。
-        <br>
-        感谢您对“我的网站”的访问！
-        <br>
-    </p>
-</div>
-<hr>
-<div class="left-aligned">
-    <p>【我的网站】版权所有。网站内容仅供参考，【我的网站】不对其安全性、可靠性、可用性等任何方面提供任何明示或暗示。【我的网站】保留修改、删除、更新网站内容等所有权力。</p>
-</div>
+        <div id="text" class="text">
+            <p>
+                欢迎来到“我的网站”！这是一个基于GitHub Pages的个人网站平台，主要栏目包括：
+            </p>
+            <p>
+                首页：访问最新的内容。
+            </p>
+            <p>
+                文章：(测试)
+            </p>
+            <p>
+                下载：提供一些好东西的下载链接。
+            </p>
+            <p>
+                联系：您可以提供反馈、建议或者关注我的账号。
+            </p>
+            <p>
+                感谢您对“我的网站”的访问！
+            </p>
+        </div>
+    </div>
+
+
+    <footer>
+        【我的网站】版权所有。网站内容仅供参考，【我的网站】不对其安全性、可靠性、可用性等任何方面提供任何明示或暗示。【我的网站】保留修改、删除、更新网站内容等所有权力。
+    </footer>
 </body>
 </html>
