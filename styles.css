@@ -59,7 +59,7 @@ td {
     color: black; /* 设置单元格文字颜色 */
 }
 ol, ul {
-    margin: 20px 0; /* 外边距 */
+    margin: 20px; /* 外边距 */
 }
 li {
     font-size: 18px; /* 字体大小 */
@@ -68,7 +68,7 @@ li {
 }
 
 a.btn {
-    all: unset; /* 重置所有默认样式 */
+    all: revert; /* 重置所有样式 */
     display: inline-block; /* 使链接成为块级元素，便于设置内边距和背景 */
     background-color: skyblue; /* 背景颜色 */
     color: white; /* 文字颜色 */

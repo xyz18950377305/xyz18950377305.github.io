@@ -2,12 +2,9 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>XYZ网站-文章</title>
+    <title>XYZ网站 - 文章</title>
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/styles.css" type="text/css">
-    <style>
-        
-    </style>
 </head>
 <body>
     <h1>
@@ -20,22 +17,55 @@
         <a class="btn" href="/下载/list.html">下载</a>
         <a class="btn" href="/联系">联系</a>
     </div>
-    
+
     <div class="content">
-        <ol>
-            <li>
-                <a href="./list/P01.html">我的网站简介</a>
-            </li>
-            <li>
-                <a href="./list/P02.html">PPT</a>
-            </li>
-            <li>
-                <a href="./list/P03.html">两企鹅补天</a>
-            </li>
+        <p id="notice">
+            加载中…
+        </p>
+        <ol id="list">
+
         </ol>
     </div>
+
     <footer>
         【我的网站】版权所有。网站内容仅供参考，【我的网站】不对其安全性、可靠性、可用性等任何方面提供任何明示或暗示。【我的网站】保留修改、删除、更新网站内容等所有权力。
     </footer>
+
+    <script>
+        const listEl   = document.getElementById('list');
+        const noticeEl = document.getElementById('notice');
+
+        function showNotice(msg) {
+            noticeEl.textContent = msg;
+            noticeEl.style.display = '';
+            listEl.style.display = 'none';
+        }
+
+        function showList(html) {
+            noticeEl.style.display = 'none';
+            listEl.innerHTML = html;
+            listEl.style.display = '';
+        }
+
+        fetch('./list.json')
+            .then(r => {
+                if (!r.ok) throw new Error('清单读取失败');
+                return r.json();
+            })
+            .then(list => {
+                if (!list.length) {
+                    showNotice('暂无文章');
+                    return;
+                }
+                showList(list.map(p => `
+                    <li>
+                        <a href="text.html?title=${encodeURIComponent(p.title)}&path=${encodeURIComponent(p.path)}">${p.title}</a>
+                    </li>
+                `).join(''));
+            })
+            .catch(e => {
+                showNotice('加载失败：' + e.message);
+            });
+    </script>
 </body>
 </html>

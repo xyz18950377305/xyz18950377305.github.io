@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>XYZ网站-文章</title>
+    <title>XYZ网站 - 文章</title>
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/styles.css" type="text/css">
     <style>
@@ -25,23 +25,69 @@
         <a class="btn" href="/下载/list.html">下载</a>
         <a class="btn" href="/联系">联系</a>
     </div>
+
     <div class="content">
-        <a class="btn" href="../">返回</a>
-        
-        <h2 id="title">
-            测试
-        </h2>
+        <a class="btn" href="./">返回列表</a>
+
+        <h2 id="title">加载中…</h2>
 
         <div id="text" class="text">
-            <p>
-                这是一篇测试文章。
-            </p>
+            <p>加载中…</p>
         </div>
     </div>
-
 
     <footer>
         【我的网站】版权所有。网站内容仅供参考，【我的网站】不对其安全性、可靠性、可用性等任何方面提供任何明示或暗示。【我的网站】保留修改、删除、更新网站内容等所有权力。
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js"></script>
+    <script>
+        // 初始化
+        const md = window.markdownit({ html: true, linkify: true, typographer: true });
+        const textEl  = document.getElementById('text');
+        const titleEl = document.getElementById('title');
+
+        // 解析 URL 参数
+        const params = new URLSearchParams(location.search);
+        const title  = params.get('title');
+        const path   = params.get('path');
+
+        // 强制所有列表项内的段落不渲染 <p>
+        md.core.ruler.push('tighten_lists', state => {
+            const stack = [];
+            for (const t of state.tokens) {
+                if (t.type === 'list_item_open') stack.push(true);
+                else if (t.type === 'list_item_close') stack.pop();
+                if (stack.length && (t.type === 'paragraph_open' || t.type === 'paragraph_close')) {
+                    t.hidden = true;
+                }
+            }
+        });
+        
+        async function main() {
+            if (!path) {
+                titleEl.textContent = '未指定文章';
+                textEl.innerHTML = '<p>请从文章列表进入。</p>';
+                return;
+            }
+
+            titleEl.textContent = title || '文章';
+            document.title = (title || '文章') + ' - XYZ网站';
+
+            try {
+                const res = await fetch(path);
+                if (!res.ok) throw new Error('读取失败');
+                const source = await res.text();
+
+                textEl.innerHTML = md.render(source);
+                window.scrollTo(0, 0);
+            } catch (e) {
+                titleEl.textContent = '加载失败';
+                textEl.innerHTML = '<p>加载失败：' + e.message + '</p>';
+            }
+        }
+
+        main();
+    </script>
 </body>
 </html>
