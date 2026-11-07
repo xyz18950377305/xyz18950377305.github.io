@@ -7,13 +7,14 @@ body {
 h1 {
     color: skyblue; /* 标题颜色 */
     text-align: center; /* 居中对齐 */
-    font-size: 56px; /* 增大字体大小 */
+    font-size: 54px; /* 增大字体大小 */
     margin: 20px 0; /* 上下外边距 */
 }
 h2 {
     color: deepskyblue; /* 标题颜色 */
     text-align: center; /* 居中对齐 */
-    font-size: 28px; /* 增大字体大小 */
+    font-size: 38px; /* 增大字体大小 */
+    margin: 10px 0; /* 上下外边距 */
 }
 hr {
     margin: 10px 0; /* 上下左右外边距 */
@@ -27,72 +28,99 @@ footer {
     padding: 20px; /* 内边距 */
     margin: 20px 0;
     color: gray; /* 文本颜色 */
+    font-size: 14px; /* 文本大小 */
 }
 p {
-    font-size: 18px; /* 字体大小 */
     color: black; /* 文本颜色 */
-    margin: 10px; /* 外边距 */
+    margin: 10px 10px; /* 外边距 */
 }
 span{
-    font-size: 18px; /* 字体大小 */
+    color: black; /* 文本颜色 */
+    margin: 10px 5px; /* 外边距 */
 }
 a {
     color: deepskyblue; /* 链接颜色 */
     text-decoration: none; /* 去掉下划线 */
-    font-size: 18px; /* 字体大小 */
     transition: color 0.3s; /* 颜色过渡效果 */
 }
 a:hover {
     color: dodgerblue; /* 悬停时链接颜色 */
 }
 table {
-    margin: auto; /* 水平居中 */
-    width: 80%; /* 宽度为80% */
+    margin: 10px 10px; /* 表格外边距 */
     border-collapse: collapse; /* 合并边框 */
 }
 th {
     border: 2px solid dodgerblue; /* 设置单元格边框 */
     padding: 10px; /* 单元格内边距 */
-    font-size: 22px; /* 设置表头文字大小 */
+    font-size: 18px; /* 设置表头文字大小 */
     color: dodgerblue; /* 设置表头文字颜色 */
 }
 td {
     border: 2px solid dodgerblue; /* 设置单元格边框 */
     padding: 10px; /* 单元格内边距 */
-    font-size: 18px; /* 设置单元格文字大小 */
     color: black; /* 设置单元格文字颜色 */
 }
 ol, ul {
-    margin: 20px; /* 外边距 */
+    margin: 10px 0; /* 外边距 */
+    padding: 0 0 0 30px; /* 内边距 */
 }
 li {
-    font-size: 18px; /* 字体大小 */
     color: black; /* 文本颜色 */
-    margin: 20px 0; /* 外边距 */
+    margin: 10px 0; /* 外边距 */
 }
-
+pre > code {
+    display: inline-block;  /* 收缩到内容宽度，多行取最长行 */
+    vertical-align: top;
+    width: fit-content; /* 关键：宽度收缩到内容最长行 */
+    max-width: 100%; /* 防止超宽 */
+    background: #ebebeb; /* 设置代码块背景颜色 */
+    padding: 5px; /* 内边距 */
+    border-radius: 2px; /* 圆角 */
+    overflow-x: auto; /* 太长时滚动 */
+    box-sizing: border-box; /* 包含内边距 */
+    margin: 0 10px; /* 外边距 */
+    font-family: monospace; /* 设置代码字体为等宽字体 */
+    font-size: 14px; /* 字体大小 */
+}
+pre:has(> code) {
+    margin: 0; /* 去掉外边距 */
+}
+:not(pre) > code {
+    background: #f0f0f0; /* 设置代码块背景颜色 */
+    padding: 5px; /* 内边距 */
+    border-radius: 2px; /* 圆角 */
+    font-family: monospace; /* 设置代码字体为等宽字体 */
+    margin: 0 0; /* 外边距 */
+    font-size: 14px; /* 字体大小 */
+}
 a.btn {
     all: revert; /* 重置所有样式 */
     display: inline-block; /* 使链接成为块级元素，便于设置内边距和背景 */
     background-color: skyblue; /* 背景颜色 */
     color: white; /* 文字颜色 */
-    padding: 15px 25px;  /* 内边距 */
-    font-size: 18px;  /* 字体大小 */
+    padding: 15px 20px;  /* 内边距 */
+    font-size: 16px;  /* 字体大小 */
     border-radius: 5px; /* 圆角 */
     transition: background-color 0.3s; /* 背景颜色过渡效果 */
-    margin: 10px 5px; /* 外边距 */
+    margin: 10px 10px; /* 外边距 */
     text-decoration: none; /* 去掉下划线 */
 }
 a.btn:hover {
     background-color: deepskyblue; /* 悬停时背景颜色 */
 }
+blockquote {
+    margin: 0 0 0 30px; /* 块引用外边距 */
+    border-left: 2px solid dodgerblue; /* 块引用左边框 */
+}
+
 .navbar {
     background-color: skyblue; /* 导航栏背景颜色 */
     overflow: hidden; /* 清除浮动 */
-    padding: 0 20px; /* 导航栏内边距 */
+    padding: 10px 10px; /* 导航栏内边距 */
 }
 .navbar a.btn {
-    margin: 10px 0; /* 外边距 */
+    margin: 0; /* 外边距 */
 }
 .content {
     padding: 20px; /* 内容内边距 */
