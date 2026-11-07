@@ -32,6 +32,9 @@ p {
     color: black; /* 文本颜色 */
     margin: 10px; /* 外边距 */
 }
+span{
+    font-size: 18px; /* 字体大小 */
+}
 a {
     color: deepskyblue; /* 链接颜色 */
     text-decoration: none; /* 去掉下划线 */

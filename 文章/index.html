@@ -53,13 +53,16 @@
                 return r.json();
             })
             .then(list => {
-                if (!list.length) {
+                const shown = list.filter(p => p.show !== false);
+
+                if (!shown.length) {
                     showNotice('暂无文章');
                     return;
                 }
-                showList(list.map(p => `
+                showList(shown.map(p => `
                     <li>
-                        <a href="text.html?title=${encodeURIComponent(p.title)}&path=${encodeURIComponent(p.path)}">${p.title}</a>
+                        <a href="txt.html?title=${encodeURIComponent(p.title)}&path=${encodeURIComponent(p.path)}">${p.title}</a>
+                        <span style="margin-left: 10px; color: #5f5f5f">[${p.time}]</span>
                     </li>
                 `).join(''));
             })

@@ -2,16 +2,25 @@
     {
         "title": "我的网站简介",
         "path": "list/1.md",
-        "time": "2025-01-17"
+        "time": "2025-01-17",
+        "show": true
     },
     {
         "title": "PPT",
         "path": "list/2.md",
-        "time": "2025-03-20"
+        "time": "2025-03-20",
+        "show": true
     },
     {
         "title": "两企鹅补天",
         "path": "list/3.md",
-        "time": "2025-04-09"
+        "time": "2025-04-09",
+        "show": true
+    },
+    {
+        "title": "番茄小说网页阅读增强",
+        "path": "list/4.md",
+        "time": "2026-11-07",
+        "show": false
     }
 ]
