@@ -7,7 +7,8 @@ body {
 h1 {
     color: skyblue; /* 标题颜色 */
     text-align: center; /* 居中对齐 */
-    font-size: 48px; /* 增大字体大小 */
+    font-size: 56px; /* 增大字体大小 */
+    margin: 20px 0; /* 上下外边距 */
 }
 h2 {
     color: deepskyblue; /* 标题颜色 */
@@ -79,7 +80,7 @@ a.btn {
     font-size: 18px;  /* 字体大小 */
     border-radius: 5px; /* 圆角 */
     transition: background-color 0.3s; /* 背景颜色过渡效果 */
-    margin: 10px 0; /* 外边距 */
+    margin: 10px 5px; /* 外边距 */
     text-decoration: none; /* 去掉下划线 */
 }
 a.btn:hover {
@@ -89,6 +90,9 @@ a.btn:hover {
     background-color: skyblue; /* 导航栏背景颜色 */
     overflow: hidden; /* 清除浮动 */
     padding: 0 20px; /* 导航栏内边距 */
+}
+.navbar a.btn {
+    margin: 10px 0; /* 外边距 */
 }
 .content {
     padding: 20px; /* 内容内边距 */
